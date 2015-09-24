@@ -1,0 +1,77 @@
+body{
+    /*background-color: #e65100;*/ /*orange darken-4*/
+    /*background-color: #3b5998;*/ /*bluish purple*/
+    /*background-color: #546e7a;*/ /*blue grey darken 1*/
+    /*background-color: #689f38;*/ /*light-green darken-2*/
+    /*background-color: #FFAB00;*/ /*amber accent-4*/
+    background-color: #ffffff; /*cyan lighten-4*/
+}
+
+.thing-form {
+    margin: 20px 0;
+}
+
+#banner {
+    border-bottom: none;
+    margin-top: -20px;
+}
+
+.buffer{
+    height: 20px;
+    display: block;
+}
+
+#hg{
+    margin-top: -30px;
+}
+
+#modal1{
+    height: 180px;
+/*    width: 60%;*/
+    color: #78909c;
+}
+
+#shadow{
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.mdi-action-favorite-outline{
+    font-size: 130px;  /*006064 cyan darken-4*/
+    color: #880e4f;
+}
+
+.mdi-social-group{
+    font-size: 130px;
+    color: #880e4f;
+}
+
+.mdi-communication-chat{
+    font-size: 130px;
+    color: #880e4f;
+}
+
+#banner h1 {
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.btn-primary {
+    background: #3b5998;
+}
+
+.hero-unit {
+    position: relative;
+    padding: 30px 15px;
+    color: #F5F5F5;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    background: #3b5998;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 70px;
+    border-top: 1px solid #E5E5E5;
+}

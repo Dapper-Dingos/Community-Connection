@@ -1,0 +1,58 @@
+div,h3 {
+	font-family: Times;
+	color: blue;
+}
+.container {
+    margin: 20px;
+}
+
+.create-job {
+	padding: 15px;
+}
+
+.user {
+	display: inline;
+}
+
+.profile-btn {
+    padding: 10px;
+}
+
+.profPic {
+  width: 300px;
+}
+
+.profile-username {
+    margin: 20px 0;
+}
+
+.job-card {
+	padding:15px;
+}
+
+#profileBG{
+	background-color: white;
+}
+
+.mdi-image-control-point{
+	font-size: 88px;
+}
+
+/*.job-card {
+	display:inline;
+	position:absolute;
+}*/
+
+/*.profile-picture {
+	position:relative;
+	width:250px;
+}
+
+.picture-form {
+	position: absolute;
+}*/
+
+.profile-email {
+    border-bottom: none;
+    margin-top: -20px;
+}
