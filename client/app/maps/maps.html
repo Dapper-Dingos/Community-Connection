@@ -1,0 +1,30 @@
+<section id='map'>
+	<div id="map_canvas" ng-controller="mapsController">
+      <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options">
+        <ui-gmap-marker data-ng-repeat='job in jobsList track by $index' coords="job.coords" idkey='job._id' closeClick="closeClick()">
+        <ui-gmap-window isIconVisibleOnClick='true' options="windowOptions" show="show" idkey='job._id' >
+        <div id='popUp' class="col s12 m6">
+            <div class="card-content black-text">
+          <div class="card darken-1 black-text" id='username'><div>{{job.username}}</div><img class='picture' src='{{job.picture}}'>
+              <span class="card-title black-text"><b>{{job.name}}</b></span>
+          </div>
+
+      <p class='flow-text'>{{job.location}}{{job.date}}</p>
+            </div>
+            <div class="card-action">
+              <p class='flow-text'>{{job.description}}</p>
+            </div>
+        </div>
+            <a id='help' class="btn indigo lighten-4">Help Out!!</a>
+    	</div>
+       </ui-gmap-marker>
+    </ui-gmap-google-map>
+</div>
+
+<script>
+$(document).ready(function() {
+ 			$('#popUp').parent().addClass("windowBox");
+ 			console.log('hello')
+ 			})
+
+</script>

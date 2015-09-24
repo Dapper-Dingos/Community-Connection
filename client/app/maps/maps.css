@@ -1,0 +1,41 @@
+.angular-google-map-container { 
+  height: 722px; // Or whatever pixel value you require :);
+  margin: auto;
+}
+
+.firstHeading{
+	font-size: 2px;
+	color: blue;
+	border-color: grey;
+}
+
+#popUp{
+	width: 100%;
+	height: 100%;
+}
+
+.gm-style-iw:parent{
+		background-color:  blue;
+		margin: 5px;
+}
+
+.windowBox{
+	background: purple;
+}
+
+
+#help{
+	float: right;
+	font-size: 22px;
+}
+
+.picture{
+	width: 20%;
+	height: 20%;
+	float: right;
+}
+
+
+.username{
+	float: right;
+}

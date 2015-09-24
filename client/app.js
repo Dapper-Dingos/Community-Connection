@@ -11,7 +11,6 @@ angular.module('theSignUp2App', [
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider
       .otherwise('/');
-
     $httpProvider.interceptors.push('authInterceptor');
   })
 

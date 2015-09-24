@@ -1,0 +1,81 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div class="container center-align">
+  <div class="row center-align">
+    <div class="col-sm-12">
+      <h5 class='blue-grey-text text-darken-1'>Create a new account below:</h5>
+    </div>
+    <div class="col-sm-12">
+      <form class="form" name="form" novalidate>
+
+        <div class="form-group" ng-class="{ 'has-success': form.name.$valid && submitted,
+                                            'has-error': form.name.$invalid && submitted }">
+         <!-- #DD: Removed label elements, used placeholders instead; removed hr elements-->
+
+          <input type="text" name="name" class="form-control" placeholder="Name" ng-model="user.name"
+                 required/>
+          <p class="help-block" ng-show="form.name.$error.required && submitted">
+            A name is required
+          </p>
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-success': form.email.$valid && submitted,
+                                            'has-error': form.email.$invalid && submitted }">
+
+          <input type="email" name="email" class="form-control" placeholder="Email address" ng-model="user.email"
+                 required
+                 mongoose-error/>
+          <p class="help-block" ng-show="form.email.$error.email && submitted">
+            Doesn't look like a valid email.
+          </p>
+          <p class="help-block" ng-show="form.email.$error.required && submitted">
+            What's your email address?
+          </p>
+          <p class="help-block" ng-show="form.email.$error.mongoose">
+            {{ errors.email }}
+          </p>
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-success': form.password.$valid && submitted,
+                                            'has-error': form.password.$invalid && submitted }">
+
+          <input type="password" name="password" class="form-control" placeholder="Password" ng-model="user.password"
+                 ng-minlength="3"
+                 required
+                 mongoose-error/>
+          <p class="help-block"
+             ng-show="(form.password.$error.minlength || form.password.$error.required) && submitted">
+            Password must be at least 3 characters.
+          </p>
+          <p class="help-block" ng-show="form.password.$error.mongoose">
+            {{ errors.password }}
+          </p>
+        </div>
+
+        <div>
+          <!--Sign up: #DD: Removed login button (problems with linking to modal login window)
+          <button class="btn btn-inverse btn-lg btn-login" type="submit"> 
+          <button class="btn btn-inverse btn-lg btn-login" ng-click="register(form)">
+          </button><a class="btn btn-default btn-lg btn-register" href="/login">Login</a> -->
+            <a class="waves-effect waves-light btn blue-grey darken-1" ng-click="register(form)">Register</a>
+        </div>
+
+        <div class="row center-align">
+          <h5 class='blue-grey-text text-darken-1'>You can also register through one of these services:</h5>
+          <a class="btn-floating btn-large waves-effect waves-light blue-grey darken-1" href="" ng-click="loginOauth('facebook')"><i class="mdi-action-account-child"></i></a><!-- Facebook -->
+          <a class="btn-floating btn-large waves-effect waves-light blue-grey darken-1" href="" ng-click="loginOauth('google')"><i class="mdi-action-backup"></i></a><!-- Google -->
+          <a class="btn-floating btn-large waves-effect waves-light blue-grey darken-1" href="" ng-click="loginOauth('twitter')"><i class="mdi-notification-sms-failed"></i></a><!-- Twitter -->
+        </div>
+
+       <!--<div>#DD: Deprecated div that was used for signup buttons
+          <a class="btn btn-facebook" href="" ng-click="loginOauth('facebook')">
+            <i class="fa fa-facebook"></i> Connect with Facebook</a>
+          <a class="btn btn-google-plus" href="" ng-click="loginOauth('google')">
+            <i class="fa fa-google-plus"></i> Connect with Google+</a>
+          <a class="btn btn-twitter" href="" ng-click="loginOauth('twitter')">
+            <i class="fa fa-twitter"></i> Connect with Twitter</a>
+        </div> -->
+      </form>
+    </div>
+  </div>
+</div>
