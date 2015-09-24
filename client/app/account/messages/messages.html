@@ -1,0 +1,51 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+<div class="container" ng-controller='MessagesCtrl'>
+  <div class="row">
+    <div class="col-md-4">
+      <div id="sidebar" class="visible-md-block hidden-md"> <b> Last Message </b>
+        <div class="lastMessageWindow" ng-repeat="message in lastmessages">
+          <div>From: {{message.fromUserName}} <img src="{{message.fromUserPicUrl}}" style="width: 25px"></img>
+          </div>
+          <div> Message: {{message.body}}</div>
+          <div>{{message.date}}</div>
+          <a ng-click="updateToFriend(message._id)">{{message.fromUserName}}</a>
+        </div>
+        <div class="lastMessage"></div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="messagesWindow">
+        <p class="welcome"> <b>Welcome, {{currentUser.name}} </b></p>
+        <div id="messageContainer" ng-repeat='message in messages'>
+            <!-- {{ message.title }} -->
+          <div>From: {{ message.fromUserName}} <img src="{{message.fromUserPicUrl}}" style="width: 25px"></img>
+          </div>
+            <!-- {{ message.fromUserId }} -->
+            <!-- {{ message.toUserId }} -->
+          <div>{{ message.body}}
+            <div>{{ message.date}}</div>
+          </div>
+            <!-- {{ message.comments }} -->
+            <!--    {{ message.hidden }} -->
+        </div>
+      </div>
+      <div class="chatWrapper">
+        <div id="menu">
+          <div style="clear:both"></div>
+        </div>
+        <form>
+          <input name="usermsg" type="text" id="usermsg" size="63" ng-model="usermsg.body" />
+          <input name="submitmsg" type="submit" class="btn btn-primary" ng-click="submit()" id="submit" value="Send" />
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="friendsList"> <b> Friends List </b>
+    <div class="friendsListContainer">
+      <div ng-repeat="friend in friends">
+        <a ng-click="updateToFriend(friend)">{{friend.name}}</a>
+        <!-- </a> -->
+      </div>
+    </div>
+  </div>
+</div>

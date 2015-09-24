@@ -1,0 +1,8 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div ng-repeat='friend in allUsers'>
+	<a ng-click='addFriend(friend)'>
+	ADD FRIEND: {{friend.name}}
+	Email: {{ friend.email }}
+	</a>
+</div>

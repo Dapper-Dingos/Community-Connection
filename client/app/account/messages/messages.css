@@ -1,0 +1,83 @@
+#sidebar {
+   	position: static;
+	color: blue;
+	background-color: #EEEEEE;
+	border: 1px solid #000;
+	width: 400px;
+	height: 600px;
+	overflow: scroll
+}
+
+.lastMessageWindow {
+	width: 370px;
+	border: 1px solid #000;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	background-color: white;
+	overflow: scroll;
+}
+
+.messagesWindow {
+	position: relative;
+	width: 800px;
+	left: 50px;
+	color: blue;
+	background-color: #EEEEEE;
+	border: 1px solid #000;
+	height: 600px;
+	overflow: scroll;
+}
+
+#messageContainer {
+	width: 680px;
+	height: 100px;
+	border: 1px solid #000;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: auto;
+	background-color: white;
+	overflow: scroll
+}
+
+.chatWrapper{
+	position: static;
+	bottom: 0;
+	margin-left: 50px;
+	height: 120px;
+	width: 800px;
+}
+
+.chatWrapper input {
+	position: static;
+	width: 701px;
+	height: 100px;
+	bottom: 0;
+
+}
+.chatWrapper #submit{
+	width: 95px;
+	background-color: #3B5998;
+}
+
+.friendsList {
+	position: relative;
+	top: -100px;
+	border: 1px solid #000;
+	background-color: #EEEEEE;
+	color: blue;
+	width: 400px;
+	height: 200px;
+	vertical-align: text-top;
+	text-align: center;
+	
+}
+
+.friendsListContainer {
+	width: 370px;
+	border: 1px solid #000;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+	overflow: scroll;
+}

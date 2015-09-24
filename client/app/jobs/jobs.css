@@ -1,0 +1,72 @@
+.radioButton {
+  padding-right: 1.5em;
+}
+
+/*
+#submit {
+	margin-top: 20px;
+	width: 125px;
+	position: relative;
+	left: 40%;
+	margin-left: 0px;
+}
+*/
+
+.box {
+/*	margin-bottom: 250px*/
+/*	width: 250px;*/
+	height: 722px;
+	overflow: scroll;
+}
+
+/*.category {
+	margin-top: 10px;
+}*/
+
+.alltext {
+	color: white;
+	position: relative;
+}
+
+.jobtitle {
+	font-size: 35px;
+	top: -25px;
+	position: relative;
+	color: white;
+}
+
+/*
+label.text {
+	color: #f4511e;
+	position: relative;
+	text-align: center;
+}
+
+h5 {
+	color: #f4511e;
+}
+
+*/
+
+#modalCore{
+    height: 500px;
+    width: auto;
+    color: #78909c;
+}
+
+#jobList{
+/*	width: 50%;*/
+/*	height: 722px;*/
+/*	float: left;*/
+	/*overflow: auto;*/
+}
+
+.maps{
+/*	width: auto;*/
+	/*height: 100%;*/
+/*	float: left;*/
+}
+
+.listPic{
+	float: left;
+}
