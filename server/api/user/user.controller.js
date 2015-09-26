@@ -81,7 +81,7 @@ exports.changePassword = function(req, res, next) {
 // update user info
 //******************** //
 exports.updateProfileInfo = function(req, res, next) {
-  console.log('user.controller.updateProfileInfo: req.user', req.body.user)
+  console.log('user.controller.updateProfileInfo: req.user', req.body)
   var userId = req.body.user._id;
   var newProfileInfo = req.body.newProfileInfo;
   console.log('user.controller.updateProfileInfo', typeof newProfileInfo, newProfileInfo)

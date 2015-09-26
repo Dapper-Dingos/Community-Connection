@@ -6,11 +6,13 @@ angular.module('theSignUp2App')
     $scope.users = {};
     $scope.categories = ['Transportation', 'Food', 'Arts & Leisure']
     $scope.currentUser = Auth.getCurrentUser();
+    console.log($scope.currentUser)
     $scope.job = {byUserId: $scope.currentUser._id};
     $scope.createJobPressed = false;
     $scope.jobPosted = false;
 
     $scope.isPressed = false;
+    $scope.currentUser.profileInfo = $scope.currentUser.profileInfo || {};
     $scope.currentUser.profileInfo.about = $scope.currentUser.profileInfo.about || 'About me';
     $scope.updateSuccess = false;
     $scope.file = '';
@@ -86,7 +88,7 @@ angular.module('theSignUp2App')
                               //#DD: Todo later: Add a Materialize toast to alert user
       if( $scope.currentUser.profileInfo.newSkill && event.keyCode == 13 ) {
         if($scope.currentUser.profileInfo.skills.indexOf($scope.currentUser.profileInfo.newSkill) !== -1){
-          $scope.taken=true;
+          $scope.taken = true;
           return;
         }
         $scope.currentUser.profileInfo.skills.push($scope.currentUser.profileInfo.newSkill);

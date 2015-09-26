@@ -1,7 +1,11 @@
 var express = require('express');
 var mongoose = require('mongoose');
 var config = require('./config/environment');
+var bodyParser = require('body-parser')
 var app = express();
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 process.env.NODE_ENV = 'development';
 

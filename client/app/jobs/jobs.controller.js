@@ -62,9 +62,10 @@ angular.module('theSignUp2App')
       var address = document.getElementById('address').value;
       $scope.geocoder.geocode( { 'address': address}, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
-         $scope.job.latitude = results[0].geometry.location.A;
-         $scope.job.longitude = results[0].geometry.location.F;
-         console.log($scope.job.lat, $scope.job.lng)
+          console.log(results)
+         $scope.job.latitude = results[0].geometry.location.H;
+         $scope.job.longitude = results[0].geometry.location.L;
+         console.log($scope.job.latitude, $scope.job.longitude)
         } else {
           alert('Please enter a valid location');
         }
@@ -86,9 +87,6 @@ angular.module('theSignUp2App')
                 $scope.jobs.forEach(function(j) {
                   $scope.jobFriends.push(j.byUserId)
                 })
-                  .catch(function(err){
-                      $scope.errors.other = err.message;
-                  })
               })
               .catch(function(err){
                 $scope.errors.other = err.message;

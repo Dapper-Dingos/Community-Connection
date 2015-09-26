@@ -45,13 +45,13 @@ function requiredProcessEnv(name) {
   facebook: {
     clientID:     process.env.FACEBOOK_ID,
     clientSecret: process.env.FACEBOOK_SECRET,
-    callbackURL:  (process.env.DOMAIN || '')
+    callbackURL:  (process.env.DOMAIN || '') + '/auth/facebook/callback'
   },
 
   google: {
     // this is not correct it should be in ../local.env.js and grunt is suppose to pull this in with grunt env:all
     clientID:     process.env.GOOGLE_ID,
     clientSecret: process.env.GOOGLE_SECRET,
-    callbackURL:  (process.env.DOMAIN || '')
+    callbackURL:  (process.env.DOMAIN || '') + '/auth/google/callback'
   }
 };
