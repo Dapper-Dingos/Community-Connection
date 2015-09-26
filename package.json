@@ -6,6 +6,7 @@
     "node": ">=0.10.0"
   },
   "dependencies": {
+    "bower": "0.6.x",
     "composable-middleware": "^0.3.0",
     "connect-multiparty": "^2.0.0",
     "cookie-parser": "^1.4.0",
@@ -23,6 +24,7 @@
     "passport-twitter": "^1.0.3"
   },
   "scripts": {
-    "start": "./node_modules/.bin/nodemon server/index.js --ignore client/ --ignore node_modules/"
+    "start": "./node_modules/.bin/nodemon server/index.js --ignore client/ --ignore node_modules/",
+    "postinstall": "./node_modules/bower/bin/bower install"
   }
 }
