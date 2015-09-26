@@ -16,8 +16,6 @@ angular.module('theSignUp2App')
     $scope.updateSuccess = false;
     $scope.file = '';
     $scope.myJobs = [];
-
-
     $scope.showUserInfo = function(){
       if (!$scope.isPressed){
         $scope.isPressed = true
@@ -42,6 +40,7 @@ angular.module('theSignUp2App')
           }
       }
     }
+
     $scope.showJobsCreated = function(){
       Profile.getMyJobs()
         .then( function(data) {
