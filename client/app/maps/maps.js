@@ -8,5 +8,4 @@ angular.module('theSignUp2App')
         templateUrl: 'app/maps/maps.html',
         controller: 'mapsController'
       });
-    console.log('routed to maps')
   });

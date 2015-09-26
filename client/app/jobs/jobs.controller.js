@@ -23,13 +23,10 @@ angular.module('theSignUp2App')
         $scope.usermsg.title = '';
         Message.sendMessages($scope.usermsg)
                     .then(function(data){
-                        console.log("Success")
-                        console.log('send data', data)
                     })
                     .catch(function(err){
                         $scope.errors.other = err.message;
                     })
-        console.log("Job Submitted!")
     };
 
 
@@ -46,7 +43,6 @@ angular.module('theSignUp2App')
                       for (var i = 0; i < data.length; i++) {
                         $scope.friends[data[i]._id] = data[i].name
                       };
-                      console.log($scope.friends + 'friends!')
                   })
                   .catch(function(err){
                       $scope.errors.other = err.message;
@@ -57,22 +53,17 @@ angular.module('theSignUp2App')
               })
 
     $scope.createJob = function() {
-      console.log('creating!')
       //geolocates and saves GPS coordinates of location provided
       var address = document.getElementById('address').value;
       $scope.geocoder.geocode( { 'address': address}, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
-          console.log(results)
          $scope.job.latitude = results[0].geometry.location.H;
          $scope.job.longitude = results[0].geometry.location.L;
-         console.log($scope.job.latitude, $scope.job.longitude)
         } else {
           alert('Please enter a valid location');
         }
-      console.log('profile.controller.js: createJob', $scope.job)
       $scope.job.picture = $scope.currentUser.profileInfo.profilePicUrl;
       $scope.job.username = $scope.currentUser.name;
-      console.log($scope.job.picture)
       $scope.jobs.push($scope.job)
       Profile.createJob($scope.job)
         .then( function(data) {

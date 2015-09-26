@@ -66,7 +66,6 @@ angular.module('theSignUp2App')
         success(function(data) {
           // $cookieStore.put('token', data.token);
           // currentUser = User.get();
-          console.log('Received Messages:', data)
           deferred.resolve(data);
           return cb();
         }).
@@ -82,7 +81,6 @@ angular.module('theSignUp2App')
       lastMessages: function(friends, _id, callback){
         var cb = callback || angular.noop;
         var deferred = $q.defer();
-        console.log('message-facotry, lastmessages',friends)
         $http.post('/api/messages/lastmessage', {
           friends: friends,
           currentUserId: _id
@@ -92,7 +90,6 @@ angular.module('theSignUp2App')
         success(function(data) {
           // $cookieStore.put('token', data.token);
           // currentUser = User.get();
-          console.log('Last Messages:', data)
           deferred.resolve(data);
           return cb();
         }).
@@ -109,7 +106,6 @@ angular.module('theSignUp2App')
       getFriends: function(friendsList, callback) {
         var cb = callback || angular.noop;
         friendsList = friendsList || currentUser.friends;
-        console.log('message-factory getFriendscurrentUser', currentUser)
         return User.getFriends({ id: currentUser._id }, {
          friends: friendsList
         }, function(user) {
@@ -122,7 +118,6 @@ angular.module('theSignUp2App')
       sendMessages: function(usermsg, callback){
         var cb = callback || angular.noop;
         var deferred = $q.defer();
-        console.log("message-factory", usermsg)
         $http.post('/api/messages/sendmessage', {
           message: usermsg
           // email: user.email,
@@ -131,7 +126,6 @@ angular.module('theSignUp2App')
         success(function(data) {
           // $cookieStore.put('token', data.token);
           // currentUser = User.get();
-          console.log('Received Messages:', data)
           deferred.resolve(data);
           return cb();
         }).
@@ -248,7 +242,6 @@ angular.module('theSignUp2App')
       updateProfileInfo: function(newProfileInfo, callback) {
         var cb = callback || angular.noop;
 
-        console.log('grab-stuff.service.js: updateProfileInfo',newProfileInfo,'\nuser: ',currentUser)
         return User.updateProfileInfo({ id: currentUser._id }, {
           user: currentUser,
           newProfileInfo: newProfileInfo
