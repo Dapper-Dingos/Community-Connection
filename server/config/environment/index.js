@@ -49,7 +49,6 @@ function requiredProcessEnv(name) {
   },
 
   google: {
-    // this is not correct it should be in ../local.env.js and grunt is suppose to pull this in with grunt env:all
     clientID:     process.env.GOOGLE_ID,
     clientSecret: process.env.GOOGLE_SECRET,
     callbackURL:  (process.env.DOMAIN || '') + '/auth/google/callback'

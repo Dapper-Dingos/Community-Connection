@@ -9,7 +9,6 @@ angular.module('theSignUp2App')
     $scope.addFriend = function(friend){
         $scope.currentUser.friends.push(friend._id)
         User.save($scope.currentUser, function(){
-            console.log(arguments)
         })
     }
     Profile.showAll()

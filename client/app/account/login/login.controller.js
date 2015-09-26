@@ -14,7 +14,6 @@ angular.module('theSignUp2App')
           password: $scope.user.password
         })
         .then( function(me) {
-          console.log(me)
           // Logged in, redirect to home
           // $location.path('/profile');
         })
@@ -26,6 +25,5 @@ angular.module('theSignUp2App')
 
     $scope.loginOauth = function(provider) {
       $window.location.href = '/auth/' + provider;
-      $location.path('/profile');
     };
   });

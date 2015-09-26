@@ -9,13 +9,13 @@ angular.module('theSignUp2App')
     $scope.job = {byUserId: $scope.currentUser._id};
     $scope.createJobPressed = false;
     $scope.jobPosted = false;
-
     $scope.isPressed = false;
     $scope.currentUser.profileInfo = $scope.currentUser.profileInfo || {};
     $scope.currentUser.profileInfo.about = $scope.currentUser.profileInfo.about || 'About me';
     $scope.updateSuccess = false;
     $scope.file = '';
     $scope.myJobs = [];
+  
     $scope.showUserInfo = function(){
       if (!$scope.isPressed){
         $scope.isPressed = true
