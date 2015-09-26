@@ -6,6 +6,7 @@ angular.module('theSignUp2App', [
   'ngSanitize',
   'ui.router',
   'ui.bootstrap',
+  'ngFileUpload',
   'uiGmapgoogle-maps'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
