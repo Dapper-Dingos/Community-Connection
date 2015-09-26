@@ -26,6 +26,5 @@ angular.module('theSignUp2App')
 
     $scope.loginOauth = function(provider) {
       $window.location.href = '/auth/' + provider;
-      $location.path('/profile');
     };
   });

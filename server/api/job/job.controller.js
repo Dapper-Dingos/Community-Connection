@@ -28,7 +28,7 @@ exports.getmyjobs = function(req, res) {
 exports.index = function(req, res) {
   Job.find(function (err, jobs) {
     if(err) { return handleError(res, err); }
-    return res.json(200, jobs);
+    return res.status(200).json(jobs)
   });
 };
 
