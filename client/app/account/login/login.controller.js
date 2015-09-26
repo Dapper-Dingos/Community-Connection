@@ -13,7 +13,8 @@ angular.module('theSignUp2App')
           email: $scope.user.email,
           password: $scope.user.password
         })
-        .then( function() {
+        .then( function(me) {
+          console.log(me)
           // Logged in, redirect to home
           // $location.path('/profile');
         })
