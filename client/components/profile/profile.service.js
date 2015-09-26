@@ -18,11 +18,9 @@ angular.module('theSignUp2App')
         // to handle $http as a $promise
         // See user.service.js
         // **********************************//
-        console.log('profile.service.js: getMyJobs: currentUser._id', currentUser._id)
         return Job.getMyJobs({ id: currentUser._id }, {
           userid: currentUser._id
         }, function() {
-          console.log('profile.service.js: getMyJobs: success callback', arguments)
           return cb();
         }, function(err) {
           return cb(err);
@@ -35,10 +33,8 @@ angular.module('theSignUp2App')
         // to handle $http as a $promise
         // See user.service.js
         // **********************************//
-        console.log('profile.service.js: showAll: currentUser._id', currentUser._id)
         return User.showAll({ id: currentUser._id }, {
         }, function() {
-          console.log('profile.service.js: showAll: success callback', arguments)
           return cb();
         }, function(err) {
           return cb(err);
@@ -51,10 +47,8 @@ angular.module('theSignUp2App')
         // to handle $http as a $promise
         // See user.service.js
         // **********************************//
-        console.log('profile.service.js: createJob: job', job)
         return Job.createJob({ id: currentUser._id }, job,
           function() {
-          console.log('profile.service.js: createJob: success callback', arguments)
           return cb();
         }, function(err) {
           return cb(err);
@@ -70,8 +64,6 @@ angular.module('theSignUp2App')
        */
       updateProfileInfo: function(newProfileInfo, callback) {
         var cb = callback || angular.noop;
-
-        console.log('profile.service.js: updateProfileInfo',newProfileInfo,'\nuser: ',currentUser)
         return User.updateProfileInfo({ id: currentUser._id }, {
           user: currentUser,
           newProfileInfo: newProfileInfo

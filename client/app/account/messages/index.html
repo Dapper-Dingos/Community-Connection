@@ -19,7 +19,6 @@
         if(!e.data){
           throw new Error('Message event contains no readable data.');
         }
-        console.log(e.data);
         var elm = document.createElement('li');
         elm.innerHTML = e.data;
         var out = document.getElementById('messages');

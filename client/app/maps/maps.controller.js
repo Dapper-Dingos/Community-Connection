@@ -21,7 +21,6 @@ angular.module('theSignUp2App')
 	  var address = document.getElementById('address').value;
 	  $scope.geocoder.geocode( { 'address': address}, function(results, status) {
 	    if (status == google.maps.GeocoderStatus.OK) {
-	    	console.log(results[0].geometry.location);
 	    } else {
 	      alert('Geocode was not successful for the following reason: ' + status);
 	    }
@@ -34,7 +33,6 @@ angular.module('theSignUp2App')
 	        longitude: position.coords.longitude
 	    };
 	    $scope.$apply();
-	    console.log('centering')
 	}
 	function onError(error) {
 	    console.log('code: '    + error.code    + '\n' + 'message: ' + error.message + '\n');
@@ -49,7 +47,6 @@ angular.module('theSignUp2App')
         };
 
 	 $scope.closeClick = function() {
-	 	console.log('closing')
             $scope.windowOptions.show = !$scope.windowOptions.show;
         };
 
@@ -63,7 +60,6 @@ angular.module('theSignUp2App')
               	}
               })
                 $scope.jobsList = data;
-                console.log($scope.jobsList)
 			})
 	}
 

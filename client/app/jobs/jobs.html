@@ -151,7 +151,6 @@
 
 <script>
   $(document).ready(function() {
-      console.log('sliding')
       $('.slider').slider({full_width: true});
 
 
@@ -163,7 +162,7 @@
         setTimeout(function(){
         $('.collapsible').collapsible({
       accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
-    }).promise(console.log('happend'));
+    }).promise();
       },1000)
 
       $('.modalCore').leanModal({
