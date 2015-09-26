@@ -16,10 +16,13 @@ exports.setup = function (User, config) {
           return done(err);
         }
         if (!user) {
+          console.log('herhehreh')
           user = new User({
             name: profile.displayName,
             email: profile.emails[0].value,
             role: 'user',
+            profilePic: 'http://graph.facebook.com/' + profile.id + '/picture',
+            profileInfo: {profilePicUrl: 'http://graph.facebook.com/' + profile.id + '/picture'},
             username: profile.username,
             provider: 'facebook',
             facebook: profile._json

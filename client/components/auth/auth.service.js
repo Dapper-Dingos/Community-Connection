@@ -6,7 +6,6 @@ angular.module('theSignUp2App')
     if($cookieStore.get('token')) {
       currentUser = User.get();
     }
-
     return {
 
       /**

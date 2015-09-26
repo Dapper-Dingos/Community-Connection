@@ -17,6 +17,7 @@ var UserSchema = new Schema({
   //   favs:  Number
   // },
   hashedPassword: String,
+  profilePic: String,
   provider: String,
   salt: String,
 
