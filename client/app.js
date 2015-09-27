@@ -7,7 +7,8 @@ angular.module('theSignUp2App', [
   'ui.router',
   'ui.bootstrap',
   'ngFileUpload',
-  'uiGmapgoogle-maps'
+  'uiGmapgoogle-maps',
+  'nemLogging'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider
