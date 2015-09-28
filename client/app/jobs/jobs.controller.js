@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('theSignUp2App')
-  .controller('JobsCtrl', function ($scope, $http, $cookieStore, User, Auth, Profile, JobsFactory, Message) {
+  .controller('JobsCtrl', function ($scope, $http, $cookieStore, $state, User, Auth, Profile, JobsFactory, Message) {
     $('.collapsible').collapsible({});
     $scope.filters = {};
     $scope.errors = {};
@@ -78,6 +78,7 @@ angular.module('theSignUp2App')
                 $scope.jobs.forEach(function(j) {
                   $scope.jobFriends.push(j.byUserId)
                 })
+              $state.reload();
               })
               .catch(function(err){
                 $scope.errors.other = err.message;
@@ -86,6 +87,6 @@ angular.module('theSignUp2App')
         .catch( function(err) {
           $scope.errors.other = err.message;
         });
-      }) 
+      })
     }
   });
