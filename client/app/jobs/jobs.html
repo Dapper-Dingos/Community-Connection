@@ -75,12 +75,10 @@
     <div class="col s6">
       <div class="box" id='jobList'>
         <ul class="collapsible collapsible-accordion" data-collapsible="accordion">
-          <li ng-repeat="job in jobs | orderBy: reverse">
-            <div class="collapsible-header blue white-text"  ng-class="($index==1) ? 'active' : ''">
           <li ng-repeat="job in jobs | filter">
             <div class="collapsible-header white-text pink darken-4"  ng-class="($index==1) ? 'active' : ''">
             <b> {{date}} {{ friends[job.byUserId] }}</b> needs help with: </b>
-               {{ job.description }} </div>
+               {{ job.name }} </div>
                 <div class="collapsible-body pink darken-1">
                   <div class="s12 m12 col">
                     <div class="card">
