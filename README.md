@@ -4,13 +4,13 @@
 
   - __Product Owner__: Charlie Harding
   - __Scrum Master__: Dan Corman
-  - __Development Team Members__: Garrett Fitzgeraldand Robert Snodgrass
+  - __Development Team Members__: Garrett Fitzgerald and Robert Snodgrass
 
 HeroHire: A Dapper Dingos Joint
 
 ![alt tag](http://i62.tinypic.com/2vxmzdc.jpg)
 
-An MEAN stack application that employs the Materialize frontend framework to create a centralized application for users to post local jobs asking for volunteers.  Users who complete jobs can be awarded Karma points, which helps rank the outreach of community participants.  Highly rated personnel are given special access to have their own job requests placed prominently in the application, which encourages sincere utilization of HeroHire. 
+An MEAN stack application that employs the Materialize front-end framework to create a centralized application for users to post local jobs asking for volunteers. Hero Hire utilizes google maps to enable you to find or post a volunteer effort but also acts as a visual representation of volunteers in your community.
 
 This application utilizes [MongoDB](http://www.mongodb.org/), [Node.js](http://www.nodejs.org/), [Express](http://expressjs.com/), and [AngularJS](http://angularjs.org/), and [Materilize](http://materializecss.com/).
 
