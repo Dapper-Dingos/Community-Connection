@@ -6,7 +6,8 @@
   - __Scrum Master__: Dan Corman
   - __Development Team Members__: Garrett Fitzgerald and Robert Snodgrass
 
-HeroHire: A Dapper Dingos Joint
+[HeroHire: A Dapper Dingos Joint](http://herohire.herokuapp.com)
+
 
 ![alt tag](http://i62.tinypic.com/2vxmzdc.jpg)
 
